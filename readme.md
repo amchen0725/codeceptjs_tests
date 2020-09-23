@@ -3,9 +3,8 @@
 Table of Contents
 =================
 
-* [codeceptjs\_tests](#codeceptjs_tests)
-  * [setup](#setup)
-  * [Test Execution](#test-execution)
+* [setup](#setup)
+* [Test Execution](#test-execution)
 
 ## setup
 Install all dependence   

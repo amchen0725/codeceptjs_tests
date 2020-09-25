@@ -10,7 +10,7 @@ const config = {
 const rule = {
   loginPageShow: "帐号登录",
   intelligentValidation: "验证成功",
-  loginSucceedTxt: "勿删企业",
+  loginSucceedTxt: "新 建",
 };
 
 Scenario("登录 - 封装方法", async (I) => {

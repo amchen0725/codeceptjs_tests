@@ -16,5 +16,9 @@ npm install --only=dev
 2. run tests using command:
     ```
     npm run test
+    OR
+    npx codeceptjs run --steps
     ```
 3. after running, the report show on report folder. Using command `allure serve report` to view allure report.
+
+Note: If you want to see html report, please run tests with command `npx codeceptjs run --reporter mochawesome`. The html report show on `mochawesome-report` folder.

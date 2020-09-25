@@ -1,8 +1,8 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 .DS_Store
-log
 report
+mochawesome-report
 .vscode
 node_modules/*
 .env

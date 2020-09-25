@@ -23,3 +23,6 @@ Scenario("登录 - 封装方法", async (I) => {
   login_obj.intelligentValidation(rule.intelligentValidation);
   login_obj.clickLoginButton(rule.loginSucceedTxt);
 });
+
+
+

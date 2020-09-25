@@ -1,4 +1,5 @@
 # codeceptjs_tests
+`codeceptjs_tests` is a easy demo of codeceptjs framework(Puppeteer)
 
 ## Table of Contents
 * [setup](#setup)

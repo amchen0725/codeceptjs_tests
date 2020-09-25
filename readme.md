@@ -1,8 +1,6 @@
 # codeceptjs_tests
 
-Table of Contents
-=================
-
+## Table of Contents
 * [setup](#setup)
 * [Test Execution](#test-execution)
 

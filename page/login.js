@@ -13,7 +13,7 @@ const locations = {
 module.exports = {
     clickLoginEntranceToLoginPage: (text) => {
         I.click(locations.loginEntrance)
-        I.waitForElement(locations.privacyCheckbox, 5)
+        I.waitForElement(locations.privacyCheckbox, 10)
         I.see(text)
     },
 
@@ -43,7 +43,7 @@ module.exports = {
 
     clickLoginButton: (text) => {
         I.click(locations.loginBtn)
-        I.wait(5)
+        I.wait(8)
         I.see(text)
     },
 }

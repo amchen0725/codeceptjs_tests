@@ -5,3 +5,4 @@ log
 report
 .vscode
 node_modules/*
+.env

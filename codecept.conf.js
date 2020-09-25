@@ -5,7 +5,7 @@ const { setHeadlessWhen } = require('@codeceptjs/configure');
 setHeadlessWhen(process.env.HEADLESS);
 
 exports.config = {
-  tests: 'tests/*.spec.ts',
+  tests: 'tests/*.spec.js',
   output: 'report',
   helpers: {
     Puppeteer: {
@@ -30,6 +30,5 @@ exports.config = {
     allure: {
       enabled: true
     }
-  },
-  require: ['ts-node/register', 'chai/register-expect'],
+  }
 }

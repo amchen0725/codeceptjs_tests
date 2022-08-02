@@ -15,7 +15,6 @@ const rule = {
 Scenario("登录 - 不封装方法", async (I) => {
   // Click login entrance
   I.amOnPage("https://www.kdocs.cn");
-  pause()
   I.click(locate(".use-now").withText("立即使用"));
   I.click(locate(".nav_tab_item").withText("帐号登录"));
   I.waitForElement("input#loginProtocal", 10);

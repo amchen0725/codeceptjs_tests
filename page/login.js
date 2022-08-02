@@ -1,18 +1,22 @@
 const { I } = inject()
 const locations = {
-    loginEntrance: '立即使用',
+    loginEntrance: locate(".use-now").withText("立即使用"),
+    loginType :locate(".nav_tab_item").withText("帐号登录"),
     privacyCheckbox: 'input#loginProtocal',
-    emailField: 'div.form_item.mt0>input#email',
-    passwordField: "div.form_item>input[type='password']",
-    verificationBtn: "div[class='sm-btn-wrapper']",
+    moreBtn: '.js_toProtocolDialog.more',
+    moreWrap:'#moreWrap',
+    account: '#account',
+    accountWrap: locate('#accountWrap').find('.nav_title').withText('帐号密码登录'),
+    emailField: '#email',
+    passwordField: "#password",
+    verificationBtn: ".sm-btn-wrapper",
     loginBtn: '#login',
-    insideLocator: '#mainWrap',
-    locatedLocator: "span[class='js_toProtocolDialog tpItem tpItem_account']",
 };
 
 module.exports = {
     clickLoginEntranceToLoginPage: (text) => {
         I.click(locations.loginEntrance)
+        I.click(locations.loginType)
         I.waitForElement(locations.privacyCheckbox, 10)
         I.see(text)
     },
@@ -21,11 +25,14 @@ module.exports = {
         I.click(locations.privacyCheckbox)
     },
 
+    clickMoreBtn: () => {
+        I.click(locations.moreBtn)
+        I.waitForVisible(locations.moreWrap, 5)
+    },
+
     clickPhoneOrEmailEntrance: () => {
-        const text = '手机或邮箱'
-        I.click(locate(locations.locatedLocator)
-            .inside(locations.insideLocator)
-            .withText(text))
+        I.click(locations.account);
+        I.waitForVisible(locations.accountWrap);
     },
 
     fillEmailField: (email) => {
@@ -43,7 +50,6 @@ module.exports = {
 
     clickLoginButton: (text) => {
         I.click(locations.loginBtn)
-        I.wait(8)
-        I.see(text)
+        I.waitForText(text, 5)
     },
 }

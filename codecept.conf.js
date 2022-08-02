@@ -11,7 +11,18 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost',
       show: true,
-      windowSize: '1920x1080'
+      windowSize: '1920x1200',
+      chrome: {
+        args: [
+          // '--no-sandbox',
+          // '--disable-gpu',
+          // '--disable-setuid-sandbox',
+          // '--font-render-hinting=medium',
+          // '--lang=zh',
+          '--window-size=1920,1200',
+          '--disable-features=site-per-process',
+      ]
+      }
     }
   },
   include: {
